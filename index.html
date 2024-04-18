@@ -3,25 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie</title>
+    <title>GB</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="src/css/index.css">
+    <link rel="stylesheet" href="items/index.css">
     <script type="text/javascript" src="src/javascript/index.js"></script>
 
-<body>
-    <h1>Movie</h1>
-    <!-- Attempt 1 -->
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="src/javascript/about.js">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
+    <script>
+        //declaring the variiables. Both variables will be used as a global scope varibale
+        var emu;
+        var play = [];
 
+        
+
+    </script>
+
+
+</head>
+<body>
+    <h1>Emulate</h1>
+    <div class="container">
+        <canvas id="screen" width="480" height="320"></canvas>
+    </div>
+    <script>
+        // Initialize the emulator
+        const canvas = document.getElementById('screen');
+        const emulator = new jsGB(canvas);
+    
+        // Load ROM file (you need to provide the ROM file)
+        emulator.loadROM('your_rom_file.gb');
     </script>
 </body>
 </html>
