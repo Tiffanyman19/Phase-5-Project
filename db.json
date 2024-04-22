@@ -1,0 +1,12 @@
+{
+    "anime":[
+        {
+            "id": 1,
+            "name": "My Hero Academia",
+            "author": " Kōhei Horikoshi",
+            "image": "./img/BNHA.jpg.jpg",
+            "rating": 8,
+            "comment": "Love a coming of age hero story!"
+        }
+    ]
+}

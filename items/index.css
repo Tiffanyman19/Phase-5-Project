@@ -11,6 +11,12 @@
     font-style: normal;
 }
 
+
+* { margin: 0; padding: 0; outline: 0; }
+
+body, html { height: 100%; }
+
+
 h1 {
     font-family: "PT Sans Narrow", sans-serif;
     font-weight: 700;
@@ -26,10 +32,108 @@ body{
     background-color: rgb(83, 83, 83);
 }
 
+h2 { 
+    font-family: "PT Sans Narrow", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #00ffff; 
+    font-size: 20px; 
+    font-family: 'coolvetica', arial, helvetica, serif; 
+    font-weight: normal; 
+    text-shadow: rgba(0,0,0,0.9) 0px 0px 2px; 
+}
 
+/*  */
+hr {
+	border:none;
+	border-top:1px solid #CCCCCC;
+	height:1px;
+	margin-bottom:25px;
+	}
 
+hr {
+	border:none;
+	border-top:1px solid #CCCCCC;
+	height:1px;
+	margin-bottom:25px;
+	}
 
-.container {
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	}
+
+img {
+	border: none;
+	}
+	
+#menu {
+	width: 200px;
+	margin: 10px;
+	border-style: solid solid none solid;
+	border-color: #889944;
+	border-width: 1px;
+}
+	
+
+	
+/* li a:visited {
+	color: #ff0000;
+	display: block;
+	background:  url(menu.gif) no-repeat;
+	padding: 8px 0 0 25px;
+}
+li {
+	color: #889944;
+	background:  url(menu.gif) no-repeat;
+	padding: 8px 0 0 27px;
+	} */
+
+.saturday{
+    margin:0;
+    padding:0;
+    list-style-type:none;
+    width:auto;
+    position:relative;
+    display:block;
+    height:36px;
+    text-transform:uppercase;
+    font-size:12px;
+    font-weight:bold;
+    background:transparent url("bgOFF.gif") repeat-x top left;
+    font-family:Helvetica,Arial,Verdana,sans-serif;
+    border-bottom:4px solid #336666;
+    border-top:1px solid #C0E2D4;
+}
+    
+ul#saturday li{
+    display:block;
+    float:left;
+    margin:0;
+    pading:0;
+}
+
+.saturday li a{
+    display:block;
+    float:left;
+    color:#874B46;
+    text-decoration:none;
+    padding:12px 20px 0 20px;
+    height:24px;
+    background:transparent url("bgDIVIDER.gif") no-repeat top right;
+}
+
+.saturday li{
+    background:transparent url("bgHOVER.gif") no-repeat top right;
+}
+    
+.saturday li {
+    color:#fff;
+    background:transparent url("bgON.gif") no-repeat top right;
+}
+
+/* .container {
     border: 2px solid rgb(0, 0, 0);
 
 }
@@ -62,4 +166,4 @@ nav ul li a {
 
 nav ul li a:hover {
     text-decoration: underline;
-}
+} */
