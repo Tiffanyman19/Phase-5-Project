@@ -14,7 +14,9 @@
 
 * { margin: 0; padding: 0; outline: 0; }
 
-body, html { height: 100%; }
+body, html { 
+    height: 100%; 
+}
 
 
 h1 {
@@ -30,6 +32,10 @@ h1 {
 }
 body{
     background-color: rgb(83, 83, 83);
+    font-family: "PT Sans Narrow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color:#000000
 }
 
 h2 { 
@@ -72,98 +78,59 @@ img {
 	width: 200px;
 	margin: 10px;
 	border-style: solid solid none solid;
-	border-color: #889944;
+	border-color: #448199;
 	border-width: 1px;
 }
 	
-
-	
-/* li a:visited {
-	color: #ff0000;
-	display: block;
-	background:  url(menu.gif) no-repeat;
-	padding: 8px 0 0 25px;
+#navigation { 
+    width: 669px; 
+    height: 66px; 
+    padding: 6px 7px 0 8px; 
+    margin-top: 10px; 
+    position: relative; 
+    margin-right: -5px;  
+    background: url(#) no-repeat 0 0; 
+    font-size: 16px; 
+    color: #fff; 
+    float: right; 
 }
-li {
-	color: #889944;
-	background:  url(menu.gif) no-repeat;
-	padding: 8px 0 0 27px;
-	} */
+#navigation ul { list-style: none; list-style-position: outside; line-height: 49px; }
 
-.saturday{
-    margin:0;
-    padding:0;
-    list-style-type:none;
-    width:auto;
-    position:relative;
-    display:block;
-    height:36px;
-    text-transform:uppercase;
-    font-size:12px;
-    font-weight:bold;
-    background:transparent url("bgOFF.gif") repeat-x top left;
-    font-family:Helvetica,Arial,Verdana,sans-serif;
-    border-bottom:4px solid #336666;
-    border-top:1px solid #C0E2D4;
-}
-    
-ul#saturday li{
-    display:block;
-    float:left;
-    margin:0;
-    pading:0;
+#navigation ul li { 
+    float: left; 
+    padding-right: 2px;  }
+
+#navigation ul li a { display: block; color: #00eeff; text-shadow: rgba(0,0,0,0.5) 0px 2px 2px; padding: 0 36px; position: relative; }
+
+#navigation ul li a:hover,
+#navigation ul li.last a:hover {  
+    text-decoration: none; 
 }
 
-.saturday li a{
-    display:block;
-    float:left;
-    color:#874B46;
-    text-decoration:none;
-    padding:12px 20px 0 20px;
-    height:24px;
-    background:transparent url("bgDIVIDER.gif") no-repeat top right;
+#navigation ul li.last { 
+    background: transparent; 
+    padding-right: 0;  
 }
 
-.saturday li{
-    background:transparent url("bgHOVER.gif") no-repeat top right;
-}
-    
-.saturday li {
-    color:#fff;
-    background:transparent url("bgON.gif") no-repeat top right;
-}
+#navigation ul li.last a { 
+    padding-right: 33px; 
+    padding-left: 33px; 
+    border-right: 0; 
+    background: transparent; }
 
-/* .container {
-    border: 2px solid rgb(0, 0, 0);
-
+#navigation ul li a span {  
+    opacity: 0;
+    -moz-opacity: 0;
+    filter:alpha(opacity=0); 
+    text-shadow: rgba(0, 183, 255, 0.9) 0px 1px 0px; 
+    width: 39px; height: 39px; position: absolute; 
+    top: -17px; right: 0; 
+    text-align: center; 
+    line-height: 39px; 
+    font-size: 14px; 
+    color: #00a2ff; 
+    transition: opacity 0.4s;
+    -moz-transition: opacity 0.4s;
+    -webkit-transition: opacity 0.4s;
+    -o-transition: opacity 0.4s;
 }
-
-nav {
-    font-family: "PT Sans Narrow", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    color: aqua;
-}
-
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: aqua;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-} */

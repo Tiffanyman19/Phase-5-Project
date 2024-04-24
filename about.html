@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,38 +8,170 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="items/about.css">
+    <script src="js/index.js"></script>
+    
+
 
 
 </head>
+
 <body>
+    <nav id="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
     <h1>About</h1>
     <div class="header">
         <p>
-            Pi
+            Anime has become popular as time goes on. Now people who never watched anime in the past, now wants to watch
+            it now. People will look online for a good anime, without any prior knowledge and they end up feeling
+            overwhelmed. This site has classic and new anime that is popular with the audience, novice and veterans in
+            all things anime.
         </p>
-        <nav id="navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
         <!-- end of navigation -->
         <div class="cl">&nbsp;</div>
     </div>
     <h3>About the Creator</h3>
-        <p>
-            My name is Tiffany Man. 
-        </p>
+    <p>
+        My name is Tiffany Man. I was introduced to Anime when I was still in middle school.
+    </p>
+    
+
+    <div class="container-fluid">
+        <h3>Creator's Favorites</h3>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="news-slider" class="owl-carousel">
+                    <div class="post-slide">
+                        <div class="post-img">
+                            <!-- Moon -->
+                            <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/5849/5849512_so.jpg"
+                                alt="" style="width:500px;height:500px;">
+                            <a href="#" class="over-layer"><i class="fa fa-link"></i></a>
+                        </div>
+                        <div class="post-content">
+                            <h3 class="post-title">
+                                <a href="#">sailor Moon R: The Movie</a>
+                            </h3>
+                            <p class="post-description">Sailor Moon is the reason I liked the Winx Club when I was little.</p>
+                            <span class="post-date"><i class="fa fa-clock-o"></i>Apr 24, 2024</span>
+                            <a href="#" class="read-more">read more</a>
+                        </div>
+                    </div>
+
+                    <div class="post-slide">
+                        <div class="post-img">
+                            <!-- Howl -->
+                            <img src="https://th.bing.com/th/id/OIP.4DHhEX0BYU0JtB_C2j7BMQHaLH?rs=1&pid=ImgDetMain"
+                                alt="" style="width:500px;height:500px;">
+                            <a href="#" class="over-layer"><i class="fa fa-link"></i></a>
+                        </div>
+                        <div class="post-content">
+                            <h3 class="post-title">
+                                <a href="#">Howl's Moving Castle</a>
+                            </h3>
+                            <p class="post-description">I was scared of the moving castle when I was little becuase the castle could walk! Creepy. I watched it again in middle school, and I love the film!</p>
+                            <span class="post-date"><i class="fa fa-clock-o"></i>Apr 24, 2024</span>
+                            <a href="#" class="read-more">read more</a>
+                        </div>
+                    </div>
+
+                    <div class="post-slide">
+                        <div class="post-img">
+                            <!-- Howl -->
+                            <img src="https://th.bing.com/th/id/OIP.ccV6jQpFug-mcBL8tCL2BQHaLH?rs=1&pid=ImgDetMain"
+                                alt="" style="width:500px;height:500px;">
+                            <a href="#" class="over-layer"><i class="fa fa-link"></i></a>
+                        </div>
+                        <div class="post-content">
+                            <h3 class="post-title">
+                                <a href="#">Kill la Kill</a>
+                            </h3>
+                            <p class="post-description">Family Drama</p>
+                            <span class="post-date"><i class="fa fa-clock-o"></i>Apr 24, 2024</span>
+                            <a href="#" class="read-more">read more</a>
+                        </div>
+                    </div>
+
+                    <div class="post-slide">
+                        <div class="post-img">
+                            <!-- Howl -->
+                            <img src="https://th.bing.com/th/id/OIP.XcRpWfqnR1fJfIvibZDD8wHaKk?rs=1&pid=ImgDetMain"
+                                alt="" style="width:500px;height:500px;">
+                            <a href="#" class="over-layer"><i class="fa fa-link"></i></a>
+                        </div>
+                        <div class="post-content">
+                            <h3 class="post-title">
+                                <a href="#">Promare</a>
+                            </h3>
+                            <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Aperiam consectetur cumque dolorum, ex incidunt ipsa laudantium necessitatibus neque
+                                quae tempora......</p>
+                            <span class="post-date"><i class="fa fa-clock-o"></i>Apr 24, 2024</span>
+                            <a href="#" class="read-more">read more</a>
+                        </div>
+                    </div>
+
+                    <div class="post-slide">
+                        <div class="post-img">
+                            <!-- Howl -->
+                            <img src="https://th.bing.com/th/id/OIP.CIivUeHLXvKLEW7DXoqy6QHaLH?w=500&h=750&rs=1&pid=ImgDetMain"
+                                alt="" style="width:500px;height:500px;">
+                            <a href="#" class="over-layer"><i class="fa fa-link"></i></a>
+                        </div>
+                        <div class="post-content">
+                            <h3 class="post-title">
+                                <a href="#">Free!</a>
+                            </h3>
+                            <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Aperiam consectetur cumque dolorum, ex incidunt ipsa laudantium necessitatibus neque
+                                quae tempora......</p>
+                            <span class="post-date"><i class="fa fa-clock-o"></i>Apr 24, 2024</span>
+                            <a href="#" class="read-more">read more</a>
+                        </div>
+                    </div>
+
+                    <div class="post-slide">
+                        <div class="post-img">
+                            <!-- One Punch -->
+                            <img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/format=auto,fit=contain,width=480,height=720,quality=85/catalog/crunchyroll/d8eed44e3d48097ab5fd36b6815fc18e.jpe"
+                                alt="" style="width:500px;height:500px;">
+                            <a href="#" class="over-layer"><i class="fa fa-link"></i></a>
+                        </div>
+                        <div class="post-content">
+                            <h3 class="post-title">
+                                <a href="#">One Punch Man</a>
+                            </h3>
+                            <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Aperiam consectetur cumque dolorum, ex incidunt ipsa laudantium necessitatibus neque
+                                quae tempora......</p>
+                            <span class="post-date"><i class="fa fa-clock-o"></i>Apr 24, 2024</span>
+                            <a href="#" class="read-more">read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="widget socials-widget">
         <h3 class="widgettitle">Get Connected</h3>
         <ul>
-            <li><a href="https://profile.indeed.com/?hl=en_US&co=US&from=gnav-jobseeker-profile--profile-one-frontend" class="Indeed"><span></span>Indeed</a></li>
+            <li><a href="https://profile.indeed.com/?hl=en_US&co=US&from=gnav-jobseeker-profile--profile-one-frontend"
+                    class="Indeed"><span></span>Indeed</a></li>
             <li><a href="https://www.linkedin.com/feed/" class="linkedin-ico"><span></span>Linkedin</a></li>
         </ul>
     </div>
 
     <div class="footer">
+        <h3 class="widgettitle">Get Connected</h3>
+
         <nav class="footer-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -48,6 +181,5 @@
         <div id="cc">
             <p class="copy">Copyright &copy; 2024 <span>|</span> Flatiron. Made by Tiffany Man</a></p>
         </div>
-        </div>
-
+    </div>
 </body>
