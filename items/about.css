@@ -30,7 +30,7 @@ h1 {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: left;
+    justify-content: Center;
     background-color: #888888;
 }
 
@@ -202,4 +202,67 @@ cc {
     .post-slide .post-content{
         padding: 0px 15px 25px 15px;
     }
+}
+
+#navigation { 
+    width: 669px; 
+    height: 66px; 
+    padding: 6px 7px 0 8px; 
+    margin-top: 10px; 
+    position: relative; 
+    margin-right: -5px;  
+    background: url(#) no-repeat 0 0; 
+    font-size: 16px; 
+    color: #fff; 
+    float: right; 
+}
+#navigation ul { 
+    list-style: none; 
+    list-style-position: outside; 
+    line-height: 49px; 
+}
+
+#navigation ul li { 
+    float: left; 
+    padding-right: 2px;  }
+
+#navigation ul li a { 
+    display: block; 
+    color: #00eeff; 
+    text-shadow: rgba(0,0,0,0.5) 0px 2px 2px; 
+    padding: 0 36px; 
+    position: relative; 
+}
+
+#navigation ul li a:hover,
+#navigation ul li.last a:hover {  
+    text-decoration: none; 
+}
+
+#navigation ul li.last { 
+    background: transparent; 
+    padding-right: 0;  
+}
+
+#navigation ul li.last a { 
+    padding-right: 33px; 
+    padding-left: 33px; 
+    border-right: 0; 
+    background: transparent; }
+
+#navigation ul li a span {  
+    opacity: 0;
+    -moz-opacity: 0;
+    filter:alpha(opacity=0); 
+    text-shadow: rgba(0, 183, 255, 0.9) 0px 1px 0px; 
+    width: 39px; height: 39px; position: absolute; 
+    top: -17px; right: 0; 
+    text-align: center; 
+    line-height: 39px; 
+    font-size: 14px; 
+    color: #00a2ff; 
+    transition: opacity 0.4s;
+    -moz-transition: opacity 0.4s;
+    -webkit-transition: opacity 0.4s;
+    -o-transition: opacity 0.4s;
 }

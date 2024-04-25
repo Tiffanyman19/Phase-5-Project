@@ -2,6 +2,7 @@
 //Would it even be called a wheel?
 //Attempt 1: Works Drag with cursor
 $(document).ready(function() {
+    console.log("Document ready"); // Add this line
     $("#news-slider").owlCarousel({
         items : 3,
         itemsDesktop:[1199,3],
