@@ -46,7 +46,7 @@ h2 {
     font-family: "PT Sans Narrow", sans-serif;
     font-weight: 700;
     font-style: normal;
-    color: #ffffff;
+    color: #000000;
     font-size: 20px;
     text-shadow: rgba(0, 0, 0, 0.9) 0px 0px 2px;
 }
@@ -458,13 +458,6 @@ textarea {
 
 .post-inner header {
     padding-bottom: 16px;
-    position: relative;
-    text-align: end;
-}
-
-.header{
-    position: relative;
-    text-align: justify;
 }
 
 .post-inner .img-holder {
@@ -600,154 +593,272 @@ textarea {
     text-decoration: none;
 }
 
-.post-slide {
-    background: #fff;
-    margin: 20px 15px 20px;
-    border-radius: 15px;
-    padding-top: 1px;
-    box-shadow: 0px 14px 22px -9px #bbcbd8;
-}
-
-.post-slide .post-img {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    margin: -12px 15px 8px 15px;
-    margin-left: -10px;
-}
-
-.post-slide .post-img img {
-    width: 100%;
-    height: auto;
-    transform: scale(1, 1);
-    transition: transform 0.2s linear;
-}
-
-.post-slide:hover .post-img img {
-    transform: scale(1.1, 1.1);
-}
-
-.post-slide .over-layer {
-    width: 100%;
+@property --randomize {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: true;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
     height: 100%;
-    position: absolute;
+  }
+  
+  
+  header {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    font-size: 1rem;
+    color: red;
+    opacity: 0;
+    animation: fade-in-out 5s 400ms ease-out forwards;
+  }
+  
+  main {
+    --size: 80vmin;
+  
+    display: grid;
+    grid-template-areas: "stack";
+    place-items: center;
+    font-size: calc(var(--size) / 14);
+  }
+  
+  main > *,
+  main::before,
+  main::after {
+    position: relative;
+    grid-area: stack;
+  }
+  
+  main::before {
+    content: "";
     top: 0;
     left: 0;
-    opacity: 0;
-    background: linear-gradient(-45deg, rgba(6, 190, 244, 0.75) 0%, rgba(45, 112, 253, 0.6) 100%);
-    transition: all 0.50s linear;
-}
-
-.post-slide:hover .over-layer {
-    opacity: 1;
-    text-decoration: none;
-}
-
-.post-slide .over-layer i {
-    position: relative;
-    top: 45%;
-    text-align: center;
-    display: block;
-    color: #fff;
-    font-size: 25px;
-}
-
-.post-slide .post-content {
-    background: #fff;
-    padding: 2px 20px 40px;
-    border-radius: 15px;
-    align-items: center;
-}
-
-.post-slide .post-title a {
-    font-size: 15px;
+    background-color: white;
+    inline-size: calc(var(--size) / 3);
+    block-size: calc(var(--size) / 3);
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  main::after {
+    content: "Click to reset wheel";
+    font-size: 0.4em;
     font-weight: bold;
-    color: #333;
-    display: inline-block;
     text-transform: uppercase;
-    transition: all 0.3s ease 0s;
-}
-
-.post-slide .post-title a:hover {
-    text-decoration: none;
-    color: #3498db;
-}
-
-.post-slide .post-description {
-    line-height: 24px;
-    color: #808080;
-    margin-bottom: 25px;
-}
-
-.post-slide .post-date {
-    color: #a9a9a9;
-    font-size: 14px;
-}
-
-.post-slide .post-date i {
-    font-size: 20px;
-    margin-right: 8px;
-    color: #CFDACE;
-}
-
-.post-slide .read-more {
-    padding: 7px 20px;
-    float: right;
-    font-size: 12px;
-    background: #2196F3;
-    color: #ffffff;
-    box-shadow: 0px 10px 20px -10px #1376c5;
-    border-radius: 25px;
-    text-transform: uppercase;
-}
-
-.post-slide .read-more:hover {
-    background: #3498db;
-    text-decoration: none;
-    color: #fff;
-}
-
-.owl-controls .owl-buttons {
+    line-height: 1.2;
     text-align: center;
-    margin-top: 20px;
-}
-
-.owl-controls .owl-buttons .owl-prev {
-    background: #fff;
-    position: absolute;
-    top: -13%;
-    left: 15px;
-    padding: 0 18px 0 15px;
-    border-radius: 50px;
-    box-shadow: 3px 14px 25px -10px #92b4d0;
-    transition: background 0.5s ease 0s;
-}
-
-.owl-controls .owl-buttons .owl-next {
-    background: #fff;
-    position: center;
-    top: -13%;
-    right: 15px;
-    padding: 0 15px 0 18px;
-    border-radius: 50px;
-    box-shadow: -3px 14px 25px -10px #92b4d0;
-    transition: background 0.5s ease 0s;
-}
-
-.owl-controls .owl-buttons .owl-prev:after,
-.owl-controls .owl-buttons .owl-next:after {
-    content: "\f104";
-    font-family: FontAwesome;
-    color: #333;
-    font-size: 30px;
-}
-
-.owl-controls .owl-buttons .owl-next:after {
-    content: "\f105";
-}
-
-@media only screen and (max-width:1280px) {
-    .post-slide .post-content {
-        padding: 0px 15px 25px 15px;
+    user-select: none;
+    max-width: 7.5em;
+    opacity: 0;
+    z-index: 2;
+  }
+  
+  input {
+    opacity: 0;
+    width: var(--size);
+    height: var(--size);
+    z-index: 3;
+    cursor: grab;
+  }
+  
+  input:active {
+    cursor: grabbing;
+  }
+  
+  .ticker {
+    --size: 0.8em;
+  
+    place-self: center end;
+    margin-inline-end: calc((var(--size) - 0.1em) * -1);
+    background-color: black;
+    width: var(--size);
+    height: calc(var(--size) / 2);
+    clip-path: polygon(100% 0, 0 50%, 100% 100%);
+    z-index: 2;
+  }
+  
+  .wheel {
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    grid-template-areas: "stack";
+    inline-size: var(--size);
+    block-size: var(--size);
+    border-radius: 50%;
+    
+  }
+  
+  .slice {
+    width: 100;
+    height: 100;
+    --count: 24;
+    --radius: calc(var(--size) / 4);
+    --deg: calc(var(--i) * (360deg / var(--count)));
+  
+    grid-area: stack;
+    font-weight: 900;
+    transform: translate3d(
+        calc(cos(var(--deg)) * var(--radius)),
+        calc(sin(var(--deg)) * var(--radius)),
+        0
+      )
+      rotate(calc(var(--deg)));
+      width: 100;
+    height: 100;
+  }
+  
+  .value {
+    --outline: 0.03em;
+    --shadow: calc(var(--outline) * 2);
+  
+    display: flex;
+    align-items: center;
+    padding-top: 0.2em;
+    letter-spacing: -0.4em;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    text-transform: uppercase;
+    text-shadow: var(--bg) var(--outline) var(--outline),
+      hsla(0 0% 0% / 0.2) var(--shadow) var(--shadow);
+    white-space: nowrap;
+    rotate: 90deg;
+    inline-size: calc(var(--size) / 2);
+    block-size: calc(var(--size) / var(--count) * 3.3);
+    background-color: var(--bg);
+    clip-path: polygon(0 0, 100% 0, 50% 100%, 50% 100%);
+    user-select: none;
+  }
+  
+  /* Fix for Safari squashing spaces */
+  .value > span {
+    display: inline-block;
+    height: 1ex;
+  }
+  
+  .value:not(.text)::before {
+    content: "$";
+    font-size: 0.1em;
+    height: .1ex;
+  }
+  
+  .text {
+    font-size: 0.5em;
+  }
+  
+  .sm {
+    font-size: 0.9em;
+  }
+  
+  .slice:nth-child(odd) {
+    --bg: #3299ed;
+    width: 100;
+    height: 100;
+    font-size:39px;
+  }
+  
+  .slice:nth-child(even) {
+    --bg: #ff0000;
+    width: 100;
+    height: 100;
+    font-size:39px;
+  }
+  
+  .slice:nth-child(3n + 3) {
+    --bg: #00ff37;
+    width: 100;
+    height: 100;
+    font-size:39px;
+  }
+  
+  .slice:nth-child(4n + 4) {
+    --bg: #ffd900;
+    width: 100;
+    height: 100;
+    font-size:39px;
+  }
+  
+  .mystery {
+    --bg: black;
+    color: white;
+    font-size:39px;
+  }
+  
+  /* Spin the wheel */
+  :root {
+    --spin-duration: 10s;
+  }
+  
+  main {
+    animation: randomize 1s linear infinite;
+  }
+  
+  main:has(input:checked) {
+    animation-play-state: paused;
+  }
+  
+  main:has(input:checked) .wheel {
+    animation: spin var(--spin-duration) cubic-bezier(0.33, 1, 0.68, 1) forwards;
+  }
+  
+  main:has(input:checked)::after {
+    animation: reset 200ms var(--spin-duration) forwards;
+  }
+  
+  body:has(input:checked) {
+    animation: set-cursor var(--spin-duration);
+  }
+  
+  input:checked {
+    cursor: initial;
+    animation: hide-checkbox var(--spin-duration);
+  }
+  
+  @keyframes randomize {
+    to {
+      --randomize: 360;
     }
-}
+  }
+  
+  @keyframes spin {
+    to {
+      rotate: calc((3600 + var(--randomize, 0)) * 1deg);
+    }
+  }
+  
+  @keyframes reset {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes set-cursor {
+    from,
+    to {
+      cursor: wait;
+    }
+  }
+  
+  @keyframes hide-checkbox {
+    from,
+    to {
+      pointer-events: none;
+    }
+  }
+  
+  @keyframes fade-in-out {
+    0%,
+    100% {
+      opacity: 0;
+    }
+    10%,
+    90% {
+      opacity: 1;
+    }
+  }
+  

@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="items/index.css" type="text/css" media="all">
+    <link rel="stylesheet" href="items/wheel.css" type="text/css" media="all">
 
 
 </head>
@@ -20,9 +20,10 @@
                 <!-- header -->
                 <div class="header">
                     <h1 id="logo"><a href="#"><img src=items/images/logo.png alt="" style="width:700px;height:500px;"></a></h1>
-                    <h2>Dummy's Guide Into Anime</h2>
+                    <h2>Wheel of Genre</h2>
                     <!-- navigation -->
                     <nav id="navigation">
+                      
                         <ul>
                             <li><a href="index.html">Home</a></li>
                             <li><a href="about.html">About</a></li>
@@ -34,111 +35,89 @@
                 </div>
                 <!-- end of header -->
                 <!-- main -->
-                <div class="main">
-                    <!-- content -->
-                    <section class="content">
-                        <!-- post -->
-                        <div class="post">
-                            <!-- post-inner -->
-                            <div class="post-inner">
-                                <header>
-                                    <h2><a href="#">Inuyasha</a></h2>
-                                    <p class="tags"><a href="#">FANTASY</a> <a href="#">ROMANCE</a> <a href="#">ANIMATION</a>
-                                    </p>
-                                    <div class="cl">&nbsp;</div>
-                                </header>
-                                <div class="img-holder"> <a href="#"><img src="https://image.tmdb.org/t/p/original/m7gGPZCguDU7bmVqQ2ZiSo7b9Xc.jpg" alt="" style="width:500px;height:600px;"></a> <a
-                                        href="#" class="btn-full-image popup"></a> </div>
-                                <!-- meta -->
-                                <div class="meta">
-                                    <p class="date">APRIL 19, 2024 by <a href="#">Kosher Pickle</a></p>
-                                    <div class="right">
-                                        <div class="rating-holder">
-                                            <p>RATING 9/10</p>
-                                            <div class="rating"> <span style="width: 100%;"></span> </div>
-                                        </div>
-                                    </div>
-                                    <div class="cl">&nbsp;</div>
-                                </div>
-                                <!-- end of meta -->
-                                <!-- post-cnt -->
-                                <div class="post-cnt">
-                                    <p>
-                                        First anime I watched when I was a kid.  Recommend if you like anime that takes place in feudal era Japan. Now the show has a sequel!
-                                    </p>
-                                    
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <!-- end of post 1 -->
-                        <!-- post 2-->
-                        <div class="post">
-                            <!-- post-inner -->
-                            <div class="post-inner">
-                                <header>
-                                    <h2><a href="#">Ouran High School Host Club</a></h2>
-                                    <p class="tags"><a href="#">ROMANCE</a> <a href="#">COMEDY</a> <a href="#">ANIMATION</a>
-                                    </p>
-                                    <div class="cl">&nbsp;</div>
-                                </header>
-                                <div class="img-holder"> <a href="#"><img src="https://image.tmdb.org/t/p/original/30N2QvPvT0F4tTQk1A6qguL63yd.jpg" alt="" style="width:500px;height:600px;"></a> <a
-                                        href="#" class="btn-full-image popup"></a> </div>
-                                <!-- meta -->
-                                <div class="meta">
-                                    <p class="date">APRIL 19, 2024 by <a href="#">Dill Pickle</a></p>
-                                    <div class="right">
-                                        <div class="rating-holder">
-                                            <p>RATING: 7/10</p>
-                                            <div class="rating"> <span style="width: 50%;"></span> </div>
-                                        </div>
-                                    </div>
-                                    <div class="cl">&nbsp;</div>
-                                </div>
-                                <!-- post-cnt -->
-                                <div class="post-cnt">
-                                    <p>
-                                        If you like OTOME like video games, you would love this anime. A teenage girl joins a prestigous academy for the rich and ends up joining a Host Club, while pretending to be a guy to pay off her debt to the club.
-                                    </p>
-                                </div>
-                                <!-- end of post 2 -->
-                            </div>
-                
-                        </div>
-                        <!-- post 3-->
-                        <div class="post">
-                            <div class="post-inner">
-                                <header>
-                                    <h2><a href="#"> Apothocary Diaries</a></h2>
-                                    <p class="tags"><a href="#">HISTORICAL</a> <a href="">COMEDY</a> <a href="#">ANIMATION</a>
-                                    </p>
-                                    <div class="cl">&nbsp;</div>
-                                </header>
-                                <div class="img-holder"> <a href="#"><img src="https://otakuusamagazine.com/wp-content/uploads/2021/09/apothecarydiaries.jpg" alt="" style="width:500px;height:600px;"></a> <a
-                                        href="#" class="btn-full-image popup"></a> 
-                                </div>
-                                
-                                <div class="meta">
-                                    <p class="date">APRIL 19, 2024 by <a href="#">Pickle Chip</a></p>
-                                    <div class="right">
-                                        <div class="rating-holder">
-                                            <p>RATING 7/10</p>
-                                            <div class="rating"> <span style="width: 70%;"></span> </div>
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="cl">&nbsp;</div>
-                                </div>
-                                
-                        
-                                <div class="post-cnt">
-                                    <p>If like shows that take place in the past, then this one is the one! This anime takes place in ancient China.</p>
-                                </div>
-                            </div>
-                            
-                        </div>
-                        <!-- end of post -->
-                    </section>
+                <main>
+                    <input type="checkbox" />
+                    <div class="ticker"></div>
+                    <div class="wheel">
+                      <div class="slice" style="--i: 1">
+                        <p class="value">
+                          ACTION
+                        </p>
+                      </div>
+                      <div class="slice" style="--i: 2">
+                        <p class="value">ACTION</p>
+                      </div>
+                      <div class="slice" style="--i: 3">
+                        <p class="value">COMEDY</p>
+                      </div>
+                      <div class="slice" style="--i: 4">
+                        <p class="value">ROMANCE</p>
+                      </div>
+                      <div class="slice" style="--i: 5">
+                        <p class="value">FANTASY</p>
+                      </div>
+                      <div class="slice" style="--i: 6">
+                        <p class="value">ACTION</p>
+                      </div>
+                      <div class="slice" style="--i: 7">
+                        <p class="value">COMEDY</p>
+                      </div>
+                      <div class="slice" style="--i: 8">
+                        <p class="value">THILLER</p>
+                      </div>
+                      <div class="slice" style="--i: 9">
+                        <p class="value">FANTASY</p>
+                      </div>
+                      <div class="slice" style="--i: 10">
+                        <p class="value">ADVENTURE</p>
+                      </div>
+                      <div class="slice" style="--i: 11">
+                        <p class="value">ACTION</p>
+                      </div>
+                      <div class="slice" style="--i: 12">
+                        <p class="value">COMEDY</p>
+                      </div>
+                      <div class="slice" style="--i: 13">
+                        <p class="value">ROMANCE</p>
+                      </div>
+                      <div class="slice" style="--i: 14">
+                        <p class="value text free-spin">
+                          <span>&nbsp;</span>SPIN AGAIN
+                        </p>
+                      </div>
+                      <div class="slice" style="--i: 15">
+                        <p class="value">FANTASY</p>
+                      </div>
+                      <div class="slice" style="--i: 16">
+                        <p class="value">ACTION</p>
+                      </div>
+                      <div class="slice" style="--i: 17">
+                        <p class="value">COMEDY</p>
+                      </div>
+                      <div class="slice" style="--i: 18">
+                        <p class="value">ROMANCE</p>
+                      </div>
+                      <div class="slice" style="--i: 19">
+                        <p class="value sm">THILLER</p>
+                      </div>
+                      <div class="slice" style="--i: 20">
+                        <p class="value">COMEDY</p>
+                      </div>
+                      <div class="slice" style="--i: 21">
+                        <p class="value">ACTION</p>
+                      </div>
+                      <div class="slice" style="--i: 22">
+                        <p class="value">COMEDY</p>
+                      </div>
+                      <div class="slice" style="--i: 23">
+                        <p class="value">ROMANCE</p>
+                      </div>
+                      <div class="slice" style="--i: 24">
+                        <p class="value sm">FANTASY</p>
+                      </div>
+                    </div>
+                  </main>
+
                     <!-- sidebar -->
                     <aside class="sidebar">
                         <div class="widget">
@@ -149,16 +128,6 @@
                                 <li><a href="romance.html">Romancce</a></li>
                                 <li><a href="#">Fantasy</a></li>
                                 <li><a href="#">Thriller</a></li>
-                            </ul>
-                        </div>
-                        <div class="widget">
-                            <h3 class="widgettitle">Popular Anime</h3>
-                            <ul>
-                                <li><a href="https://dragonball.fandom.com/wiki/Dragon_Ball_Z">Dragon Ball (Series) <strong>PG</strong></a></li>
-                                <li><a href="https://www.imdb.com/title/tt2560140/">Attack on Titan <strong>TV-13</strong></a></li>
-                                <li><a href="https://www.imdb.com/title/tt0388629/">One Piece <strong>TV-14</strong></a></li>
-                                <li><a href="https://www.imdb.com/title/tt9335498/">Demon Slayer <strong>TV-MA</strong></a></li>
-                                <li><a href="https://www.imdb.com/title/tt0988824/?ref_=tt_pg">Naruto <strong>TV-G</strong></a></li>
                             </ul>
                         </div>
                         <div class="widget socials-widget">
