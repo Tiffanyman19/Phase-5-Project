@@ -376,7 +376,7 @@ textarea {
 }
 
 .footer-nav ul li a {
-    color: #ffffff;
+    color: #000000;
 }
 
 .footer-nav ul li a:hover {
@@ -391,7 +391,7 @@ textarea {
 
 .footer p.copy {
     float: right;
-    color: #ffffff;
+    color: #000000;
     font-size: 11px;
     line-height: 11px;
 }
